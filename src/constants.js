@@ -152,7 +152,7 @@ export const SkillsInfo = [
       id: 2,
       title: "First Fiddle Clone",
       description:
-        "A responsive restaurant website clone of FirstFiddle.in built using React + Vite and styled with Bootstrap CSS. This project replicates the frontend of FirstFiddle, a popular F&B brand, and includes scroll-triggered animations using GSAP for a modern user experience.",
+        "A responsive restaurant website clone of FirstFiddle.in built using React + Vite and styled with Bootstrap CSS. This project replicates the frontend of FirstFiddle, a popular F&B brand.",
       image: firstfiddleimg,
       tags: ["React JS","Bootstrap CSS", "HTML","JavaScript"],
       github: "https://github.com/amandevrajput31/FirstFiddle-clone",

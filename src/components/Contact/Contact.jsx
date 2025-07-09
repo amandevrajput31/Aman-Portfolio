@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
@@ -12,10 +13,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_rmcmhmrss",  // Replace with your EmailJS Service ID
-        "template_yq6gwza",  // Replace with your EmailJS Template ID
+        "service_rmcmhmrss", // Replace with your EmailJS Service ID
+        "template_yq6gwza", // Replace with your EmailJS Template ID
         form.current,
-        "7bC2u94v95YV9TJSw"  // Replace with your EmailJS Public Key
+        "7bC2u94v95YV9TJSw" // Replace with your EmailJS Public Key
       )
       .then(
         () => {
@@ -57,9 +58,16 @@ const Contact = () => {
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-32 h-1 bg-purple-500 mx-auto mt-4"
+        />{" "}
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          I’d love to hear from you—reach out for any opportunities or questions!
+          I’d love to hear from you—reach out for any opportunities or
+          questions!
         </p>
       </div>
 
@@ -69,7 +77,11 @@ const Contact = () => {
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
-        <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="mt-4 flex flex-col space-y-4"
+        >
           <input
             type="email"
             name="user_email"
@@ -98,7 +110,7 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
-          
+
           {/* Send Button */}
           <button
             type="submit"

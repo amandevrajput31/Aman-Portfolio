@@ -1,19 +1,25 @@
 import React from "react";
-import { experiences } from "../../constants"; // Import your data
+import { experiences } from "../../constants";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[10vw] font-sans bg-skills-gradient clip-path-custom-2"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[10vw] font-sans"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-32 h-1 bg-purple-500 mx-auto mt-4"
+        />{" "}
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My work experience and the roles I have taken in
-          the organization.
+          My work experience and the roles I have taken in the organization.
         </p>
       </div>
 
@@ -30,10 +36,9 @@ const Experience = () => {
               index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
             }`}
           >
-            
             {/* Content Section */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl  border border-white bg-gray-900  shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
               } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
             >
@@ -59,11 +64,15 @@ const Experience = () => {
                     </h4>
                   </div>
                   {/* Date at the bottom */}
-                  <p className="text-sm text-gray-500 mt-2">{experience.date}</p>
+                  <p className="text-sm text-gray-500 mt-2">
+                    {experience.date}
+                  </p>
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400 text-justify">{experience.desc}</p>
+              <p className="mt-4 text-gray-400 md:text-justify">
+                {experience.desc}
+              </p>
               <div className="mt-4">
                 <h5 className="font-medium text-white">Skills:</h5>
                 <ul className="flex flex-wrap mt-2">

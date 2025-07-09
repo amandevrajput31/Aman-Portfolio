@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import Tilt from 'react-parallax-tilt';
 import profileImage from '../../assets/rounded Profile photo.png';
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-20 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
@@ -60,12 +59,12 @@ const About = () => {
           
         </div>
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <div className="md:w-1/2 flex justify-center md:justify-end ">
          
             <img
               src={profileImage}
               alt="Aman Dev Rajput"
-              className="md:w-[420px] md:h-[530px] w-[200px] h-[200px] rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="md:w-[420px] md:h-[530px] w-[200px] h-[200px] rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)] hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
             />
           
         </div>
