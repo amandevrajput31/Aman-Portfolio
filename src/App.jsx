@@ -23,9 +23,7 @@ const App = () => {
   return (
     <LazyMotion features={domAnimation}>
       <div className="bg-[#050414]">
-        {/* Show BlurBlob only on desktop */}
-      
-
+        
         {/* Responsive background pattern */}
         <div
           className={`absolute inset-0 ${
